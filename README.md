@@ -1,7 +1,9 @@
 Multirobot add for husky simulation
 =====
 
-This package is intended for individual and multirobot spawn for the Clearpath Robot Husky.
+This package is intended for individual and multirobot spawn for the Clearpath robot Husky in Gazebo.
+For hardware implementation, refer to the main repository of Clearpath Robotics.
+
 Controllers have been changed from original .yaml files to xacro descriptions, in order to avoid conflicts with namespaces and controllers.
 
 :warning: **For ROS 2 Humble, this repository is no longer used.  Please visit [clearpath_common](https://github.com/clearpathrobotics/clearpath_common).  Check the [documentation](https://docs.clearpathrobotics.com/docs/ros/) for more details including supported sensors.**
