@@ -28,7 +28,7 @@ ros2 launch husky_gazebo gazebo.launch.py
 
 For multiple robots:
 ```
-ros2 launch husky_gazebo gazebo.launch.py
+ros2 launch husky_gazebo multirobot.launch.py
 ```
 
 
