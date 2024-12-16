@@ -125,7 +125,7 @@ def generate_launch_description():
                 executable ='rviz2',
                 name       ='rviz2',
                 output     ='log',
-                arguments  =['-d', str(Path(get_package_share_directory('husky_description')) / 'rviz' / 'husky.rviz')],) 
+                arguments  =['-d', str(Path(get_package_share_directory('husky_description')) / 'rviz' / 'husky_multi.rviz')],) 
     arrNodes.append(rviz_node)
 
     for node in arrNodes:
