@@ -1,9 +1,8 @@
 Multirobot add for husky simulation
 =====
 
-
-
-**ORIGINAL README
+This package is intended for individual and multirobot spawn for the Clearpath Robot Husky.
+Controllers have been changed from original .yaml files to xacro descriptions, in order to avoid conflicts with namespaces and controllers.
 
 :warning: **For ROS 2 Humble, this repository is no longer used.  Please visit [clearpath_common](https://github.com/clearpathrobotics/clearpath_common).  Check the [documentation](https://docs.clearpathrobotics.com/docs/ros/) for more details including supported sensors.**
 
@@ -18,6 +17,22 @@ real robot operation.
 For Husky instructions and tutorials, please see [Robots/Husky](http://wiki.ros.org/Robots/Husky).
 
 To create a custom Husky description or simulation, please fork [husky_customization](https://github.com/husky/husky_customization).
+
+husky_multirobot
+==============
+
+For launching one robot:
+```
+ros2 launch husky_gazebo gazebo.launch.py
+```
+
+For multiple robots:
+```
+ros2 launch husky_gazebo gazebo.launch.py
+```
+
+
+
 
 husky_desktop
 =============
