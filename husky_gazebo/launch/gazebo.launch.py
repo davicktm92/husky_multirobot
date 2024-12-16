@@ -109,14 +109,14 @@ def generate_launch_description():
         )
         arrNodes.append(spawn_entity_cmd)
 
-        node_tf = Node( 
-        package='tf2_ros',
-        executable='static_transform_publisher',
-        arguments=['0','0','0', '0', '0', '0', 
-            'map', robot['name'] + 'odom'],    
-        output='screen')
+        # node_tf = Node( 
+        # package='tf2_ros',
+        # executable='static_transform_publisher',
+        # arguments=['0','0','0', '0', '0', '0', 
+        #     'map', robot['name'] + 'odom'],    
+        # output='screen')
 
-        arrNodes.append(node_tf)
+        # arrNodes.append(node_tf)
 
     rviz_node = Node(package    ='rviz2',
                 executable ='rviz2',
