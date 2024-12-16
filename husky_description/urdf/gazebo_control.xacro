@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="husky_wheel">
+
+  <gazebo>
+  	<plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
+	    <num_wheel_pairs>2</num_wheel_pairs>
+	    <wheel_separation>0.512</wheel_separation>
+		<wheel_diameter>0.3302</wheel_diameter>
+	    
+	  	 
+	    <left_joint>$(arg namespace)front_left_wheel_joint</left_joint>
+	    <left_joint>$(arg namespace)rear_left_wheel_joint</left_joint>
+	    <right_joint>$(arg namespace)front_right_wheel_joint</right_joint>
+	    <right_joint>$(arg namespace)rear_right_wheel_joint</right_joint>
+	    <odometry_frame>$(arg namespace)odom</odometry_frame>
+	    <robot_base_frame>$(arg namespace)base_link</robot_base_frame>
+
+	    <ros>
+		<remapping>/cmd_vel:=$(arg namespace)/cmd_vel</remapping>
+		<remapping>/odom:=$(arg namespace)/odom</remapping>
+
+		<namespace>$(arg namespace)</namespace>
+	    </ros>
+	    
+	    <publish_odom>true</publish_odom>
+            <publish_odom_tf>true</publish_odom_tf>
+            <publish_wheel_tf>true</publish_wheel_tf>
+            <update_rate>10.0</update_rate>
+
+
+        </plugin>
+
+    </gazebo>
+</robot>
+

@@ -17,8 +17,10 @@
   <xacro:arg name="is_sim" default="false" />
   <xacro:arg name="urdf_extras" default="$(optenv CPR_URDF_EXTRAS empty.urdf)" />
 
+  <xacro:arg name="serial_port" default="$(optenv HUSKY_SERIAL_PORT /dev/prolific)" />
+
   <!-- Included URDF/XACRO Files -->
-  <xacro:include filename="$(find husky_description)/urdf/decorations.urdf.xacro" />
+  <!--xacro:include filename="$(find husky_description)/urdf/decorations.urdf.xacro" /-->
   <xacro:include filename="$(find husky_description)/urdf/wheel.urdf.xacro" />
 
   <xacro:include filename="$(find husky_description)/urdf/accessories/intel_realsense.urdf.xacro"/>
@@ -122,7 +124,7 @@
       <origin xyz="${-wheelbase/2} ${-track/2} ${wheel_vertical_offset}" rpy="0 0 0" />
     </xacro:husky_wheel>
 
-    <xacro:husky_decorate prefix="$(arg prefix)"/>
+    <!--xacro:husky_decorate /-->
 
     <!-- <xacro:if value="$(arg laser_enabled)">
 
@@ -174,8 +176,8 @@
           <param name="wheel_diameter">0.3302</param>
           <param name="max_accel">5.0</param>
           <param name="max_speed">1.0</param>
-          <param name="polling_timeout">10.0</param>
-          <param name="serial_port">/dev/prolific</param>
+          <param name="polling_timeout">0.1</param>
+          <param name="serial_port">$(arg serial_port)</param>
         </xacro:unless>
       </hardware>
       <joint name="${prefix}front_left_wheel_joint">
