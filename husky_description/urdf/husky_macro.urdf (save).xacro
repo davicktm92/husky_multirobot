@@ -27,18 +27,6 @@
 
   <xacro:property name="M_PI" value="3.14159"/>
 
-  <!-- Husky Macro for lidar-->
-  <xacro:macro name="lidar" params="prefix">
-    <link name="${prefix}base_lidar"/>
-
-    <joint name="${prefix}base_lidar_joint" type="fixed">
-      <origin xyz="0.55 0 0.13" rpy="0 0 0" />
-      <parent link="${prefix}base_link" />
-      <child link="${prefix}base_lidar" />
-    </joint>
-
-  </xacro:macro>
-
   <xacro:macro name="husky" params="prefix">
 
     <!-- Base Size -->
