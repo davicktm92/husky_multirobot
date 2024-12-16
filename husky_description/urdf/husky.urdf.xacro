@@ -19,7 +19,7 @@
   <xacro:if value="$(arg is_sim)">
 
 
-    <gazebo reference="imu_link">
+    <gazebo reference="$(arg prefix)imu_link">
       <sensor name="$(arg prefix)imu_sensor" type="imu">
       <plugin filename="libgazebo_ros_imu_sensor.so" name="$(arg prefix)imu_plugin">
           <ros>
@@ -34,7 +34,7 @@
       </sensor>
     </gazebo>
 
-    <gazebo reference="$gps_link">
+    <gazebo reference="$(arg prefix)gps_link">
       <sensor name="$(arg prefix)gps_sensor" type="gps">
       <plugin filename="libgazebo_ros_gps_sensor.so" name="gps_plugin">
           <ros>
