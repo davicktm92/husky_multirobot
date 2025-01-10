@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 
-<robot xmlns:xacro="http://ros.org/wiki/xacro" name="husky_wheel">
-
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="husky_wheel1">
 	<gazebo>
   		<plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
 			<num_wheel_pairs>2</num_wheel_pairs>

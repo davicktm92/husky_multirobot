@@ -7,12 +7,18 @@ from launch_ros.substitutions import FindPackageShare
 from ament_index_python.packages import get_package_share_directory
 
 from pathlib import Path
+import os
+
+
+# ARGUMENTS = [
+#     DeclareLaunchArgument('world_path', default_value=os.path.join(FindPackageShare(package='husky_gazebo').find('husky_gazebo'),'worlds','clearpath_playpen.world'),
+#                           description='The world path, by default is empty.world'),
+# ]
 
 ARGUMENTS = [
-    DeclareLaunchArgument('world_path', default_value='',
+    DeclareLaunchArgument('world_path', default_value='empty.world',
                           description='The world path, by default is empty.world'),
 ]
-
 
 def generate_launch_description():
 
