@@ -25,7 +25,7 @@ def generate_launch_description():
     ld = LaunchDescription(ARGUMENTS)
     
     robots = [
-        {'name': 'robot1', 'x_pos': 0.0, 'y_pos': 0.0, 'z_pos': 0.01,},
+        {'name': '', 'x_pos': 0.0, 'y_pos': 0.0, 'z_pos': 0.01,},
     ]
 
     arrNodes=[]

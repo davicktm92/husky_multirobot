@@ -35,6 +35,7 @@ with open(os.path.join(get_package_share_directory('husky_navigation'), 'params'
     for i in range(len(names['names'])):
         robot_names.append(names['names'].get('robot'+str(i+1)))
         robot_positions.append(names['position'].get('robot'+str(i+1)))
+    
     #ojo a esto porque asi se accede a los valores de un diccionario
     #print(robot_positions[0].get('x'))
 
@@ -42,7 +43,8 @@ def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
     autostart = LaunchConfiguration('autostart', default='true')
     
-    lifecycle_nodes = ['map_server']
+    #lifecycle_nodes = ['map_server']
+    lifecycle_nodes=[]
 
     map_server_config_path = os.path.join(
     get_package_share_directory('husky_navigation'),
@@ -59,72 +61,99 @@ def generate_launch_description():
 
     ekf_params_file = os.path.join(params_dir, 'dual_ekf_navsat_params.yaml')
 
-    namespace = LaunchConfiguration('namespace', default='robot1')
 
-    nav2_param_substitutions = {
-        #'base_frame_id': 'robot1/base_footprint',
-        #'odom_frame_id': 'robot1/odom',
-        #'map_frame_id': 'robot1/map',
-        #'global_frame_id': 'robot1/map',
-        'robot_base_frame': robot_names[0]+'/base_link',
-        'global_frame':     robot_names[0]+'/map',
-        'odom_topic':       robot_names[0]+'/odom',
-        'scan_topic':       robot_names[0]+'/scan',
-        }
-    
-    nav2_configured_params = RewrittenYaml(
-        source_file=nav2_params_file,
-        root_key='',
-        param_rewrites=nav2_param_substitutions,
-        convert_types=True)
-    
+    ld=LaunchDescription()
 
-    ekf_param_substitutions = {
-        'map_frame':        robot_names[0]+'/map',
-        'odom_frame':       robot_names[0]+'/odom',
-        'base_link_frame':  robot_names[0]+'/base_link',
-        'world_frame':      robot_names[0]+'/map',
-        'gps_frame':        robot_names[0]+'/gps',
-        'imu_frame':        robot_names[0]+'/imu',
-        }
-    
-    ekf_configured_params=RewrittenYaml(
-        source_file=ekf_params_file,
-        root_key='',
-        param_rewrites=ekf_param_substitutions,
-        convert_types=True
-    )
-    
-    return LaunchDescription([
+    arrNodes=[]
 
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(os.path.join(husky_description_dir,'gazebo.launch.py')),
-        ),
 
-        Node(
+    gazebo_node=IncludeLaunchDescription(
+             PythonLaunchDescriptionSource(os.path.join(husky_description_dir,'multirobot.launch.py')),
+         )
+    arrNodes.append(gazebo_node)
+
+    # map_server_node = Node(
+    #     package='nav2_map_server',
+    #     executable='map_server',
+    #     name='map_server',
+    #     output='screen',
+    #     parameters=[{'use_sim_time': use_sim_time, 
+    #                 'yaml_filename': map_server_config_path,
+    #                 'frame_id': 'robot1/map',
+    #                 'topic_name': 'robot1/map',
+    #                 }],
+    # )
+    # arrNodes.append(map_server_node)
+    
+    # map_server_lyfecicle = Node(
+    #     package='nav2_lifecycle_manager',
+    #     executable='lifecycle_manager',
+    #     name='lifecycle_manager',
+    #     output='screen',
+    #     emulate_tty=True,
+    #     parameters=[{'use_sim_time': use_sim_time},
+    #                 {'autostart': autostart},
+    #                 {'node_names': lifecycle_nodes},
+    #                 ]
+    #     )
+    # arrNodes.append(map_server_lyfecicle)
+
+    for i in range(len(robot_names)):
+
+        #namespace = LaunchConfiguration('namespace', default='robot1')
+        namespace = robot_names[i]
+
+        map_server_node = Node(
             package='nav2_map_server',
             executable='map_server',
-            name='map_server',
+            name=namespace+'_map_server',
             output='screen',
             parameters=[{'use_sim_time': use_sim_time, 
                         'yaml_filename': map_server_config_path,
-                        'frame_id': 'robot1/map',
-                        'topic_name': 'robot1/map',
+                        'frame_id': robot_names[i]+'/map',
+                        'topic_name': robot_names[i]+'/map',
                         }],
-        ),
-        Node(
-            package='nav2_lifecycle_manager',
-            executable='lifecycle_manager',
-            name='lifecycle_manager',
-            output='screen',
-            emulate_tty=True,
-            parameters=[{'use_sim_time': use_sim_time},
-                        {'autostart': autostart},
-                        {'node_names': lifecycle_nodes},
-                        ]
-            ),
+        )
+        arrNodes.append(map_server_node)
 
-        GroupAction([
+        lifecycle_nodes.append(namespace+'_map_server')
+
+        nav2_param_substitutions = {
+            'base_frame_id':    robot_names[i]+'/base_footprint',
+            'odom_frame_id':    robot_names[i]+'/odom',
+            'map_frame_id':     robot_names[i]+'/map',
+            'global_frame_id':  robot_names[i]+'/map',
+            'robot_base_frame': robot_names[i]+'/base_link',
+            'global_frame':     robot_names[i]+'/map',
+            'odom_topic':       robot_names[i]+'/odom',
+            'scan_topic':       robot_names[i]+'/scan',
+            }
+        
+        nav2_configured_params = RewrittenYaml(
+            source_file=nav2_params_file,
+            root_key='',
+            param_rewrites=nav2_param_substitutions,
+            convert_types=True)
+        
+
+        ekf_param_substitutions = {
+            'map_frame':        robot_names[i]+'/map',
+            'odom_frame':       robot_names[i]+'/odom',
+            'base_link_frame':  robot_names[i]+'/base_link',
+            'world_frame':      robot_names[i]+'/map',
+            'gps_frame':        robot_names[i]+'/gps',
+            'imu_frame':        robot_names[i]+'/imu',
+            }
+        
+        ekf_configured_params=RewrittenYaml(
+            source_file=ekf_params_file,
+            root_key='',
+            param_rewrites=ekf_param_substitutions,
+            convert_types=True
+        )
+
+
+        ekf_nav2_action=GroupAction([
             PushRosNamespace(
                 namespace=namespace
             ),
@@ -147,9 +176,86 @@ def generate_launch_description():
                     "namespace": namespace,
                     }.items(),                
             ),
-        ]),
+        ])
+        arrNodes.append(ekf_nav2_action)
+    
+        map_server_lyfecicle = Node(
+            package='nav2_lifecycle_manager',
+            executable='lifecycle_manager',
+            name='lifecycle_manager',
+            output='screen',
+            emulate_tty=True,
+            parameters=[{'use_sim_time': use_sim_time},
+                        {'autostart': autostart},
+                        {'node_names': lifecycle_nodes},
+                        ]
+            )
+        arrNodes.append(map_server_lyfecicle)
+    
+
+    for node in arrNodes:
+        ld.add_action(node)
+    
+    return ld
+
+    
+
+    
+    # return LaunchDescription([
+
+    #     IncludeLaunchDescription(
+    #         PythonLaunchDescriptionSource(os.path.join(husky_description_dir,'gazebo.launch.py')),
+    #     ),
+
+    #     Node(
+    #         package='nav2_map_server',
+    #         executable='map_server',
+    #         name='map_server',
+    #         output='screen',
+    #         parameters=[{'use_sim_time': use_sim_time, 
+    #                     'yaml_filename': map_server_config_path,
+    #                     'frame_id': 'robot1/map',
+    #                     'topic_name': 'robot1/map',
+    #                     }],
+    #     ),
+    #     Node(
+    #         package='nav2_lifecycle_manager',
+    #         executable='lifecycle_manager',
+    #         name='lifecycle_manager',
+    #         output='screen',
+    #         emulate_tty=True,
+    #         parameters=[{'use_sim_time': use_sim_time},
+    #                     {'autostart': autostart},
+    #                     {'node_names': lifecycle_nodes},
+    #                     ]
+    #         ),
+
+    #     GroupAction([
+    #         PushRosNamespace(
+    #             namespace=namespace
+    #         ),
+
+    #         IncludeLaunchDescription(
+    #             PythonLaunchDescriptionSource(os.path.join(gps_localization_dir,'multi_dual_ekf_navsat.launch.py')),
+    #             launch_arguments={
+    #                 "params_file": ekf_configured_params,
+    #                 "namespace": namespace,
+    #             }.items()
+    #         ),
+    #         IncludeLaunchDescription(
+    #             PythonLaunchDescriptionSource(
+    #                 os.path.join(bringup_dir,"navigation_launch.py")
+    #             ),
+    #             launch_arguments={
+    #                 'use_sim_time': use_sim_time,
+    #                 "params_file": nav2_configured_params,
+    #                 "autostart": autostart,
+    #                 "namespace": namespace,
+    #                 }.items(),                
+    #         ),
+    #     ]),
         
 
 
 
-    ])
+    # ])

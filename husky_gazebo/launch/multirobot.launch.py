@@ -61,6 +61,7 @@ def generate_launch_description():
 
     for robot in robots:
         namespace = robot['name'] if robot['name'] != "" else ""
+        prefix = namespace + "/" if namespace != "" else ""
 
         robot_description_content = Command(
             [
@@ -72,7 +73,7 @@ def generate_launch_description():
                 " ",
                 "name:="+robot['name'],
                 " ",
-                "prefix:="+namespace,
+                "prefix:="+prefix,
                 " ",
                 "is_sim:=true",
                 " ",
@@ -116,7 +117,7 @@ def generate_launch_description():
         package='tf2_ros',
         executable='static_transform_publisher',
         arguments=['0','0','0', '0', '0', '0', 
-            'map', robot['name'] + 'odom'],    
+            'map', robot['name'] + '/map'],    
         output='screen')
 
         arrNodes.append(node_tf)
