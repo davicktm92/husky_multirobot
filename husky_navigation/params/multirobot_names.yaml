@@ -1,0 +1,22 @@
+names:
+  robot1: robot1
+  robot2: robot2
+  robot3: robot3
+  robot4: robot4
+position:
+  robot1:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  robot2:
+    x: 1.0
+    y: 0.0
+    z: 0.0
+  robot3:
+    x: 2.0
+    y: 0.0
+    z: 0.0
+  robot4:
+    x: 3.0
+    y: 0.0
+    z: 0.0

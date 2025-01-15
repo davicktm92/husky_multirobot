@@ -22,16 +22,9 @@ import launch.actions
 
 
 def generate_launch_description():
-    #namespace = LaunchConfiguration('namespace', default='')
-    
-    gps_wpf_dir = get_package_share_directory(
-        "husky_navigation")
-    rl_params_file = os.path.join(
-        gps_wpf_dir, "params", "dual_ekf_navsat_params.yaml")
-    
-    # rl_params_file=LaunchConfiguration('params_file')
 
-
+    rl_params_file=LaunchConfiguration('params_file')
+    
     return LaunchDescription(
         [
             launch.actions.DeclareLaunchArgument(
@@ -60,7 +53,7 @@ def generate_launch_description():
                 package="robot_localization",
                 executable="navsat_transform_node",
                 name="navsat_transform",
-                output="screen",
+                output="own_log",
                 parameters=[rl_params_file, {"use_sim_time": True}],
                 remappings=[
                     ("imu/data", "imu/data"),

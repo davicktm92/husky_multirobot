@@ -1,7 +1,6 @@
 # For parameter descriptions, please refer to the template parameter files for each node.
 
-#ekf_filter_node_odom:
-/**:
+ekf_filter_node_odom:
   ros__parameters:
     frequency: 30.0
     two_d_mode: true # Recommended to use 2d mode for nav2 in mostly planar environments
@@ -53,8 +52,8 @@
                               0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.3,   0.0,
                               0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.3]
 
-#ekf_filter_node_map:
-#  ros__parameters:
+ekf_filter_node_map:
+  ros__parameters:
     frequency: 30.0
     two_d_mode: true  # Recommended to use 2d mode for nav2 in mostly planar environments
     print_diagnostics: true
@@ -115,8 +114,8 @@
                               0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.3,    0.0,
                               0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,     0.0,     0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.3]
 
-#navsat_transform:
-#  ros__parameters:
+navsat_transform:
+  ros__parameters:
     frequency: 30.0
     delay: 3.0
     magnetic_declination_radians: 0.0

@@ -7,12 +7,13 @@
 			<wheel_separation>0.512</wheel_separation>
 			<wheel_diameter>0.3302</wheel_diameter>
 			
-			<left_joint>$(arg namespace)front_left_wheel_joint</left_joint>
-			<left_joint>$(arg namespace)rear_left_wheel_joint</left_joint>
-			<right_joint>$(arg namespace)front_right_wheel_joint</right_joint>
-			<right_joint>$(arg namespace)rear_right_wheel_joint</right_joint>
-			<odometry_frame>$(arg namespace)odom</odometry_frame>
-			<robot_base_frame>$(arg namespace)base_link</robot_base_frame>
+			<left_joint>$(arg prefix)front_left_wheel_joint</left_joint>
+			<left_joint>$(arg prefix)rear_left_wheel_joint</left_joint>
+			<right_joint>$(arg prefix)front_right_wheel_joint</right_joint>
+			<right_joint>$(arg prefix)rear_right_wheel_joint</right_joint>
+			<odometry_frame>$(arg prefix)odom</odometry_frame>
+			
+			<robot_base_frame>$(arg prefix)base_link</robot_base_frame>
 			
 			<max_wheel_torque>100.0</max_wheel_torque>
 			<max_wheel_acceleration>5</max_wheel_acceleration>
@@ -21,7 +22,9 @@
 			<ros>
 				<remapping>/cmd_vel:=$(arg namespace)/cmd_vel</remapping>
 				<remapping>/odom:=$(arg namespace)/odom</remapping>
-
+				<!--remapping>/tf:=tf</remapping-->
+				<!--remapping>/tf_static:=tf_static</remapping-->
+				
 				<namespace>$(arg namespace)</namespace>
 			</ros>
 			<publish_odom>true</publish_odom>

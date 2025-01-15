@@ -25,7 +25,7 @@ def generate_launch_description():
     ld = LaunchDescription(ARGUMENTS)
     
     robots = [
-        {'name': '', 'x_pos': 0.0, 'y_pos': 0.0, 'z_pos': 0.01,},
+        {'name': 'robot1', 'x_pos': 0.0, 'y_pos': 0.0, 'z_pos': 0.01,},
     ]
 
     arrNodes=[]
@@ -64,6 +64,7 @@ def generate_launch_description():
 
     for robot in robots:
         namespace = robot['name'] if robot['name'] != "" else ""
+        prefix = namespace + "/" if namespace != "" else ""
 
         robot_description_content = Command(
             [
@@ -75,7 +76,7 @@ def generate_launch_description():
                 " ",
                 "name:="+robot['name'],
                 " ",
-                "prefix:="+namespace,
+                "prefix:="+prefix,
                 " ",
                 "is_sim:=true",
                 " ",
@@ -94,6 +95,7 @@ def generate_launch_description():
             output='screen',
             namespace=namespace,
             parameters=[params],
+            
         )
 
         arrNodes.append(robot_state_publisher_node)
@@ -114,15 +116,6 @@ def generate_launch_description():
             output='screen',
         )
         arrNodes.append(spawn_entity_cmd)
-
-        # node_tf = Node( 
-        # package='tf2_ros',
-        # executable='static_transform_publisher',
-        # arguments=['0','0','0', '0', '0', '0', 
-        #     'map', robot['name'] + 'odom'],    
-        # output='screen')
-
-        # arrNodes.append(node_tf)
 
     rviz_node = Node(package    ='rviz2',
                 executable ='rviz2',
