@@ -116,11 +116,20 @@ def generate_launch_description():
         node_tf = Node( 
         package='tf2_ros',
         executable='static_transform_publisher',
-        arguments=['0','0','0', '0', '0', '0', 
-            'map', robot['name'] + '/map'],    
+        arguments=[str(robot['x_pos']),str(robot['y_pos']),str(robot['z_pos']), '0', '0', '0', 
+            '/map', robot['name'] + '/map'],    
         output='screen')
 
         arrNodes.append(node_tf)
+
+        odom_tf = Node( 
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        arguments=['0', '0', '0', '0', '0', '0', 
+            '/map', robot['name'] + '/odom'],    
+        output='screen')
+
+        arrNodes.append(odom_tf)
 
     rviz_node = Node(package    ='rviz2',
                 executable ='rviz2',

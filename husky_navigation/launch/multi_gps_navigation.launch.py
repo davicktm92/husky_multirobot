@@ -110,7 +110,7 @@ def generate_launch_description():
             output='screen',
             parameters=[{'use_sim_time': use_sim_time, 
                         'yaml_filename': map_server_config_path,
-                        'frame_id': robot_names[i]+'/map',
+                        'frame_id': '/map',
                         'topic_name': robot_names[i]+'/map',
                         }],
         )
@@ -124,9 +124,11 @@ def generate_launch_description():
             'map_frame_id':     robot_names[i]+'/map',
             'global_frame_id':  robot_names[i]+'/map',
             'robot_base_frame': robot_names[i]+'/base_link',
-            'global_frame':     robot_names[i]+'/map',
-            'odom_topic':       robot_names[i]+'/odom',
-            'scan_topic':       robot_names[i]+'/scan',
+            #'global_frame':     robot_names[i]+'/map',
+            'global_frame':     'map',
+            'odom_topic':       '/'+robot_names[i]+'/odom',
+            'scan_topic':       '/'+robot_names[i]+'/scan',
+            'topic':            '/'+robot_names[i]+'/scan',
             }
         
         nav2_configured_params = RewrittenYaml(
@@ -158,13 +160,13 @@ def generate_launch_description():
                 namespace=namespace
             ),
 
-            IncludeLaunchDescription(
-                PythonLaunchDescriptionSource(os.path.join(gps_localization_dir,'multi_dual_ekf_navsat.launch.py')),
-                launch_arguments={
-                    "params_file": ekf_configured_params,
-                    "namespace": namespace,
-                }.items()
-            ),
+            # IncludeLaunchDescription(
+            #     PythonLaunchDescriptionSource(os.path.join(gps_localization_dir,'multi_dual_ekf_navsat.launch.py')),
+            #     launch_arguments={
+            #         "params_file": ekf_configured_params,
+            #         "namespace": namespace,
+            #     }.items()
+            # ),
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource(
                     os.path.join(bringup_dir,"navigation_launch.py")
@@ -174,7 +176,8 @@ def generate_launch_description():
                     "params_file": nav2_configured_params,
                     "autostart": autostart,
                     "namespace": namespace,
-                    }.items(),                
+                    }.items(),
+                             
             ),
         ])
         arrNodes.append(ekf_nav2_action)
@@ -197,65 +200,3 @@ def generate_launch_description():
         ld.add_action(node)
     
     return ld
-
-    
-
-    
-    # return LaunchDescription([
-
-    #     IncludeLaunchDescription(
-    #         PythonLaunchDescriptionSource(os.path.join(husky_description_dir,'gazebo.launch.py')),
-    #     ),
-
-    #     Node(
-    #         package='nav2_map_server',
-    #         executable='map_server',
-    #         name='map_server',
-    #         output='screen',
-    #         parameters=[{'use_sim_time': use_sim_time, 
-    #                     'yaml_filename': map_server_config_path,
-    #                     'frame_id': 'robot1/map',
-    #                     'topic_name': 'robot1/map',
-    #                     }],
-    #     ),
-    #     Node(
-    #         package='nav2_lifecycle_manager',
-    #         executable='lifecycle_manager',
-    #         name='lifecycle_manager',
-    #         output='screen',
-    #         emulate_tty=True,
-    #         parameters=[{'use_sim_time': use_sim_time},
-    #                     {'autostart': autostart},
-    #                     {'node_names': lifecycle_nodes},
-    #                     ]
-    #         ),
-
-    #     GroupAction([
-    #         PushRosNamespace(
-    #             namespace=namespace
-    #         ),
-
-    #         IncludeLaunchDescription(
-    #             PythonLaunchDescriptionSource(os.path.join(gps_localization_dir,'multi_dual_ekf_navsat.launch.py')),
-    #             launch_arguments={
-    #                 "params_file": ekf_configured_params,
-    #                 "namespace": namespace,
-    #             }.items()
-    #         ),
-    #         IncludeLaunchDescription(
-    #             PythonLaunchDescriptionSource(
-    #                 os.path.join(bringup_dir,"navigation_launch.py")
-    #             ),
-    #             launch_arguments={
-    #                 'use_sim_time': use_sim_time,
-    #                 "params_file": nav2_configured_params,
-    #                 "autostart": autostart,
-    #                 "namespace": namespace,
-    #                 }.items(),                
-    #         ),
-    #     ]),
-        
-
-
-
-    # ])
