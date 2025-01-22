@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="default">
+     <gravity>0 0 0</gravity>
+    <!-- A global light source -->
+<scene>
+<shadows> true </shadows>
+<ambient>0.4 0.4 0.4 1.0</ambient>
+<background>0.290 0.337 0.560 0.7</background>
+<grid>false</grid>
+<sky>
+<time>17</time>
+<sunrise>15</sunrise>
+<sunset>18</sunset>
+<clouds>
+<humidity>0.01</humidity>
+</clouds>
+</sky>
+</scene>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    
+    
+
+    <model name="heightmap">
+      <static>true</static>
+      <link name="link_1">
+        <collision name="collision">
+          <geometry>
+            <heightmap>
+              <uri>file://la_cabrera/prueba_XXXm9.tif</uri>
+              <size>1430 1430 129</size>
+              <pos>0.000000 0.000000 0 0 0 0</pos>
+            </heightmap>
+          </geometry>
+        </collision>
+
+   <visual name="visual_abcedf">
+          <geometry>
+            <heightmap>
+              <texture>
+                <diffuse>file://la_cabrera/mapa_cuadrado.png</diffuse>
+                <normal>file://la_cabrera/mapa_cuadrado.png </normal>
+                <size>1430</size>
+              </texture>
+              <texture>
+                <diffuse>file://la_cabrera/mapa_cuadrado.png</diffuse>
+                <normal>file://la_cabrera/mapa_cuadrado.png</normal>
+                <size>1430</size>
+              </texture>
+              <texture>
+                <diffuse>file://la_cabrera/mapa_cuadrado.png</diffuse>
+                <normal>file://la_cabrera/mapa_cuadrado.png</normal>
+                <size>1430</size>
+              </texture>
+              <blend>
+                <min_height>2</min_height>
+                <fade_dist>0.1</fade_dist>
+              </blend>
+              <blend>
+                <min_height>2</min_height>
+                <fade_dist>0.1</fade_dist>
+              </blend>
+              <uri>file://la_cabrera/prueba_XXXm9.tif</uri>
+              <size>1430 1430 129</size>
+              <pos>0.000000 0.000000 0 0 0 0</pos>
+            </heightmap>
+          </geometry>
+        </visual>
+
+      </link>
+    </model>
+
+  </world>
+</sdf>
+
+
+  

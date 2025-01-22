@@ -42,8 +42,7 @@ with open(os.path.join(get_package_share_directory('husky_navigation'), 'params'
 def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
     autostart = LaunchConfiguration('autostart', default='true')
-    
-    #lifecycle_nodes = ['map_server']
+
     lifecycle_nodes=[]
 
     map_server_config_path = os.path.join(
@@ -72,35 +71,9 @@ def generate_launch_description():
          )
     arrNodes.append(gazebo_node)
 
-    # map_server_node = Node(
-    #     package='nav2_map_server',
-    #     executable='map_server',
-    #     name='map_server',
-    #     output='screen',
-    #     parameters=[{'use_sim_time': use_sim_time, 
-    #                 'yaml_filename': map_server_config_path,
-    #                 'frame_id': 'robot1/map',
-    #                 'topic_name': 'robot1/map',
-    #                 }],
-    # )
-    # arrNodes.append(map_server_node)
-    
-    # map_server_lyfecicle = Node(
-    #     package='nav2_lifecycle_manager',
-    #     executable='lifecycle_manager',
-    #     name='lifecycle_manager',
-    #     output='screen',
-    #     emulate_tty=True,
-    #     parameters=[{'use_sim_time': use_sim_time},
-    #                 {'autostart': autostart},
-    #                 {'node_names': lifecycle_nodes},
-    #                 ]
-    #     )
-    # arrNodes.append(map_server_lyfecicle)
 
     for i in range(len(robot_names)):
 
-        #namespace = LaunchConfiguration('namespace', default='robot1')
         namespace = robot_names[i]
 
         map_server_node = Node(
@@ -124,7 +97,6 @@ def generate_launch_description():
             'map_frame_id':     robot_names[i]+'/map',
             'global_frame_id':  robot_names[i]+'/map',
             'robot_base_frame': robot_names[i]+'/base_link',
-            #'global_frame':     robot_names[i]+'/map',
             'global_frame':     'map',
             'odom_topic':       '/'+robot_names[i]+'/odom',
             'scan_topic':       '/'+robot_names[i]+'/scan',
@@ -160,6 +132,7 @@ def generate_launch_description():
                 namespace=namespace
             ),
 
+            # Navsat transform node for GPS (pendant to be fixed) 
             # IncludeLaunchDescription(
             #     PythonLaunchDescriptionSource(os.path.join(gps_localization_dir,'multi_dual_ekf_navsat.launch.py')),
             #     launch_arguments={

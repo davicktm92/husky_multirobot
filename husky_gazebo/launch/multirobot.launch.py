@@ -1,3 +1,5 @@
+import os
+import yaml
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, ExecuteProcess, SetEnvironmentVariable
 from launch.substitutions import Command, EnvironmentVariable, FindExecutable, LaunchConfiguration, PathJoinSubstitution
@@ -13,17 +15,26 @@ ARGUMENTS = [
                           description='The world path, by default is empty.world'),
 ]
 
+robot_names = []
+robot_positions = []
+
+with open(os.path.join(get_package_share_directory('husky_navigation'), 'params', 'multirobot_names.yaml'), 'r') as file:
+    names = yaml.safe_load(file)
+    for i in range(len(names['names'])):
+        robot_names.append(names['names'].get('robot'+str(i+1)))
+        robot_positions.append(names['position'].get('robot'+str(i+1)))
 
 def generate_launch_description():
 
     ld = LaunchDescription(ARGUMENTS)
-    
-    robots = [
-        {'name': 'robot1', 'x_pos': 0.0, 'y_pos': 0.5, 'z_pos': 0.01,},
-        {'name': 'robot2', 'x_pos': 0.0, 'y_pos': -0.5, 'z_pos': 0.01,},
-        {'name': 'robot3', 'x_pos': 0.0, 'y_pos': -1.5, 'z_pos': 0.01,},
-        {'name': 'robot4', 'x_pos': 0.0, 'y_pos': -2.5, 'z_pos': 0.01,},
-    ]
+
+    robots = [{} for i in range(len(robot_names))]
+    for i in range(len(robot_names)):
+        robots[i]['name'] = robot_names[i]
+        robots[i]['x_pos'] = robot_positions[i].get('x')
+        robots[i]['y_pos'] = robot_positions[i].get('y')
+        robots[i]['z_pos'] = robot_positions[i].get('z')
+
 
     arrNodes=[]
 
@@ -116,7 +127,7 @@ def generate_launch_description():
         node_tf = Node( 
         package='tf2_ros',
         executable='static_transform_publisher',
-        arguments=[str(robot['x_pos']),str(robot['y_pos']),str(robot['z_pos']), '0', '0', '0', 
+        arguments=[str(robot['x_pos']),str(robot['y_pos']),'0', '0', '0', '0', 
             '/map', robot['name'] + '/map'],    
         output='screen')
 
