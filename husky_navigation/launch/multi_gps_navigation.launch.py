@@ -45,11 +45,13 @@ def generate_launch_description():
 
     lifecycle_nodes=[]
 
-    map_server_config_path = os.path.join(
+    map_server_config_path_default = os.path.join(
     get_package_share_directory('husky_navigation'),
     'maps',
     'map.yaml'
     )
+
+    map_server_config_path = LaunchConfiguration('map_path', default=map_server_config_path_default)
    
     husky_description_dir = os.path.join(get_package_share_directory('husky_gazebo'), 'launch')
     gps_localization_dir = os.path.join(get_package_share_directory('husky_navigation'), 'launch')

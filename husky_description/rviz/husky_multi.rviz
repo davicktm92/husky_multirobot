@@ -6,7 +6,8 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-      Splitter Ratio: 0.5
+        - /TF1/Frames1
+      Splitter Ratio: 0.5710306167602539
     Tree Height: 719
   - Class: rviz_common/Selection
     Name: Selection
@@ -65,76 +66,80 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        robot1base_footprint:
+        robot1/base_footprint:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        robot1base_link:
+        robot1/base_lidar:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
-        robot1front_bumper_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        robot1front_left_wheel:
+        robot1/base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot1front_right_wheel:
+        robot1/front_bumper_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot1gps_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        robot1imu_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        robot1inertial_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        robot1rear_bumper_link:
+        robot1/front_left_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot1rear_left_wheel:
+        robot1/front_right_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot1rear_right_wheel:
+        robot1/gps_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot1/imu_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot1/inertial_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot1/rear_bumper_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot1top_chassis_link:
+        robot1/rear_left_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot1top_plate_front_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        robot1top_plate_link:
+        robot1/rear_right_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot1top_plate_rear_link:
+        robot1/top_chassis_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        robot1user_rail_link:
+          Value: true
+        robot1/top_plate_front_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot1/top_plate_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robot1/top_plate_rear_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot1/user_rail_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -165,76 +170,80 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        robot2base_footprint:
+        robot2/base_footprint:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        robot2base_link:
+        robot2/base_lidar:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
-        robot2front_bumper_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        robot2front_left_wheel:
+        robot2/base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot2front_right_wheel:
+        robot2/front_bumper_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot2gps_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        robot2imu_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        robot2inertial_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        robot2rear_bumper_link:
+        robot2/front_left_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot2rear_left_wheel:
+        robot2/front_right_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot2rear_right_wheel:
+        robot2/gps_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot2/imu_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot2/inertial_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot2/rear_bumper_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot2top_chassis_link:
+        robot2/rear_left_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot2top_plate_front_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        robot2top_plate_link:
+        robot2/rear_right_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot2top_plate_rear_link:
+        robot2/top_chassis_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        robot2user_rail_link:
+          Value: true
+        robot2/top_plate_front_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot2/top_plate_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robot2/top_plate_rear_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot2/user_rail_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -265,76 +274,80 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        robot3base_footprint:
+        robot3/base_footprint:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        robot3base_link:
+        robot3/base_lidar:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
-        robot3front_bumper_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        robot3front_left_wheel:
+        robot3/base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot3front_right_wheel:
+        robot3/front_bumper_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot3gps_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        robot3imu_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        robot3inertial_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        robot3rear_bumper_link:
+        robot3/front_left_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot3rear_left_wheel:
+        robot3/front_right_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot3rear_right_wheel:
+        robot3/gps_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot3/imu_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot3/inertial_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot3/rear_bumper_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot3top_chassis_link:
+        robot3/rear_left_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot3top_plate_front_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        robot3top_plate_link:
+        robot3/rear_right_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot3top_plate_rear_link:
+        robot3/top_chassis_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        robot3user_rail_link:
+          Value: true
+        robot3/top_plate_front_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot3/top_plate_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robot3/top_plate_rear_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot3/user_rail_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -365,76 +378,80 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        robot4base_footprint:
+        robot4/base_footprint:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        robot4base_link:
+        robot4/base_lidar:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
-        robot4front_bumper_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        robot4front_left_wheel:
+        robot4/base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot4front_right_wheel:
+        robot4/front_bumper_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot4gps_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        robot4imu_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        robot4inertial_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        robot4rear_bumper_link:
+        robot4/front_left_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot4rear_left_wheel:
+        robot4/front_right_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot4rear_right_wheel:
+        robot4/gps_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot4/imu_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot4/inertial_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot4/rear_bumper_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot4top_chassis_link:
+        robot4/rear_left_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot4top_plate_front_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        robot4top_plate_link:
+        robot4/rear_right_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        robot4top_plate_rear_link:
+        robot4/top_chassis_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        robot4user_rail_link:
+          Value: true
+        robot4/top_plate_front_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot4/top_plate_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robot4/top_plate_rear_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot4/user_rail_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -451,144 +468,160 @@ Visualization Manager:
       Enabled: true
       Frame Timeout: 15
       Frames:
-        All Enabled: true
-        robot1base_footprint:
+        All Enabled: false
+        map:
           Value: true
-        robot1base_link:
+        robot1/base_footprint:
           Value: true
-        robot1front_bumper_link:
+        robot1/base_lidar:
           Value: true
-        robot1front_left_wheel:
+        robot1/base_link:
           Value: true
-        robot1front_right_wheel:
+        robot1/front_bumper_link:
           Value: true
-        robot1gps_link:
+        robot1/front_left_wheel:
           Value: true
-        robot1imu_link:
+        robot1/front_right_wheel:
           Value: true
-        robot1inertial_link:
+        robot1/gps_link:
           Value: true
-        robot1odom:
+        robot1/imu_link:
           Value: true
-        robot1rear_bumper_link:
+        robot1/inertial_link:
           Value: true
-        robot1rear_left_wheel:
+        robot1/map:
           Value: true
-        robot1rear_right_wheel:
+        robot1/odom:
           Value: true
-        robot1top_chassis_link:
+        robot1/rear_bumper_link:
+          Value: false
+        robot1/rear_left_wheel:
           Value: true
-        robot1top_plate_front_link:
+        robot1/rear_right_wheel:
           Value: true
-        robot1top_plate_link:
+        robot1/top_chassis_link:
           Value: true
-        robot1top_plate_rear_link:
+        robot1/top_plate_front_link:
           Value: true
-        robot1user_rail_link:
+        robot1/top_plate_link:
           Value: true
-        robot2base_footprint:
+        robot1/top_plate_rear_link:
           Value: true
-        robot2base_link:
+        robot1/user_rail_link:
           Value: true
-        robot2front_bumper_link:
+        robot2/base_footprint:
           Value: true
-        robot2front_left_wheel:
+        robot2/base_lidar:
           Value: true
-        robot2front_right_wheel:
+        robot2/base_link:
           Value: true
-        robot2gps_link:
+        robot2/front_bumper_link:
           Value: true
-        robot2imu_link:
+        robot2/front_left_wheel:
           Value: true
-        robot2inertial_link:
+        robot2/front_right_wheel:
           Value: true
-        robot2odom:
+        robot2/gps_link:
           Value: true
-        robot2rear_bumper_link:
+        robot2/imu_link:
           Value: true
-        robot2rear_left_wheel:
+        robot2/inertial_link:
           Value: true
-        robot2rear_right_wheel:
+        robot2/map:
           Value: true
-        robot2top_chassis_link:
+        robot2/odom:
           Value: true
-        robot2top_plate_front_link:
+        robot2/rear_bumper_link:
+          Value: false
+        robot2/rear_left_wheel:
           Value: true
-        robot2top_plate_link:
+        robot2/rear_right_wheel:
           Value: true
-        robot2top_plate_rear_link:
+        robot2/top_chassis_link:
           Value: true
-        robot2user_rail_link:
+        robot2/top_plate_front_link:
           Value: true
-        robot3base_footprint:
+        robot2/top_plate_link:
           Value: true
-        robot3base_link:
+        robot2/top_plate_rear_link:
           Value: true
-        robot3front_bumper_link:
+        robot2/user_rail_link:
           Value: true
-        robot3front_left_wheel:
+        robot3/base_footprint:
           Value: true
-        robot3front_right_wheel:
+        robot3/base_lidar:
           Value: true
-        robot3gps_link:
+        robot3/base_link:
           Value: true
-        robot3imu_link:
+        robot3/front_bumper_link:
           Value: true
-        robot3inertial_link:
+        robot3/front_left_wheel:
           Value: true
-        robot3odom:
+        robot3/front_right_wheel:
           Value: true
-        robot3rear_bumper_link:
+        robot3/gps_link:
           Value: true
-        robot3rear_left_wheel:
+        robot3/imu_link:
           Value: true
-        robot3rear_right_wheel:
+        robot3/inertial_link:
           Value: true
-        robot3top_chassis_link:
+        robot3/map:
           Value: true
-        robot3top_plate_front_link:
+        robot3/odom:
           Value: true
-        robot3top_plate_link:
+        robot3/rear_bumper_link:
+          Value: false
+        robot3/rear_left_wheel:
           Value: true
-        robot3top_plate_rear_link:
+        robot3/rear_right_wheel:
           Value: true
-        robot3user_rail_link:
+        robot3/top_chassis_link:
           Value: true
-        robot4base_footprint:
+        robot3/top_plate_front_link:
           Value: true
-        robot4base_link:
+        robot3/top_plate_link:
           Value: true
-        robot4front_bumper_link:
+        robot3/top_plate_rear_link:
           Value: true
-        robot4front_left_wheel:
+        robot3/user_rail_link:
           Value: true
-        robot4front_right_wheel:
+        robot4/base_footprint:
           Value: true
-        robot4gps_link:
+        robot4/base_lidar:
           Value: true
-        robot4imu_link:
+        robot4/base_link:
           Value: true
-        robot4inertial_link:
+        robot4/front_bumper_link:
           Value: true
-        robot4odom:
+        robot4/front_left_wheel:
           Value: true
-        robot4rear_bumper_link:
+        robot4/front_right_wheel:
           Value: true
-        robot4rear_left_wheel:
+        robot4/gps_link:
           Value: true
-        robot4rear_right_wheel:
+        robot4/imu_link:
           Value: true
-        robot4top_chassis_link:
+        robot4/inertial_link:
           Value: true
-        robot4top_plate_front_link:
+        robot4/map:
           Value: true
-        robot4top_plate_link:
+        robot4/odom:
           Value: true
-        robot4top_plate_rear_link:
+        robot4/rear_bumper_link:
+          Value: false
+        robot4/rear_left_wheel:
           Value: true
-        robot4user_rail_link:
+        robot4/rear_right_wheel:
           Value: true
-        world:
+        robot4/top_chassis_link:
+          Value: true
+        robot4/top_plate_front_link:
+          Value: true
+        robot4/top_plate_link:
+          Value: true
+        robot4/top_plate_rear_link:
+          Value: true
+        robot4/user_rail_link:
           Value: true
       Marker Scale: 1
       Name: TF
@@ -596,132 +629,577 @@ Visualization Manager:
       Show Axes: true
       Show Names: false
       Tree:
-        world:
-          robot1odom:
-            robot1base_link:
-              robot1base_footprint:
-                {}
-              robot1front_bumper_link:
-                {}
-              robot1front_left_wheel:
-                {}
-              robot1front_right_wheel:
-                {}
-              robot1gps_link:
-                {}
-              robot1imu_link:
-                {}
-              robot1inertial_link:
-                {}
-              robot1rear_bumper_link:
-                {}
-              robot1rear_left_wheel:
-                {}
-              robot1rear_right_wheel:
-                {}
-              robot1top_chassis_link:
-                {}
-              robot1top_plate_link:
-                robot1top_plate_front_link:
+        map:
+          robot1/map:
+            robot1/odom:
+              robot1/base_link:
+                robot1/base_footprint:
                   {}
-                robot1top_plate_rear_link:
+                robot1/base_lidar:
                   {}
-              robot1user_rail_link:
-                {}
-          robot2odom:
-            robot2base_link:
-              robot2base_footprint:
-                {}
-              robot2front_bumper_link:
-                {}
-              robot2front_left_wheel:
-                {}
-              robot2front_right_wheel:
-                {}
-              robot2gps_link:
-                {}
-              robot2imu_link:
-                {}
-              robot2inertial_link:
-                {}
-              robot2rear_bumper_link:
-                {}
-              robot2rear_left_wheel:
-                {}
-              robot2rear_right_wheel:
-                {}
-              robot2top_chassis_link:
-                {}
-              robot2top_plate_link:
-                robot2top_plate_front_link:
+                robot1/front_bumper_link:
                   {}
-                robot2top_plate_rear_link:
+                robot1/front_left_wheel:
                   {}
-              robot2user_rail_link:
-                {}
-          robot3odom:
-            robot3base_link:
-              robot3base_footprint:
-                {}
-              robot3front_bumper_link:
-                {}
-              robot3front_left_wheel:
-                {}
-              robot3front_right_wheel:
-                {}
-              robot3gps_link:
-                {}
-              robot3imu_link:
-                {}
-              robot3inertial_link:
-                {}
-              robot3rear_bumper_link:
-                {}
-              robot3rear_left_wheel:
-                {}
-              robot3rear_right_wheel:
-                {}
-              robot3top_chassis_link:
-                {}
-              robot3top_plate_link:
-                robot3top_plate_front_link:
+                robot1/front_right_wheel:
                   {}
-                robot3top_plate_rear_link:
+                robot1/gps_link:
                   {}
-              robot3user_rail_link:
-                {}
-          robot4odom:
-            robot4base_link:
-              robot4base_footprint:
-                {}
-              robot4front_bumper_link:
-                {}
-              robot4front_left_wheel:
-                {}
-              robot4front_right_wheel:
-                {}
-              robot4gps_link:
-                {}
-              robot4imu_link:
-                {}
-              robot4inertial_link:
-                {}
-              robot4rear_bumper_link:
-                {}
-              robot4rear_left_wheel:
-                {}
-              robot4rear_right_wheel:
-                {}
-              robot4top_chassis_link:
-                {}
-              robot4top_plate_link:
-                robot4top_plate_front_link:
+                robot1/imu_link:
                   {}
-                robot4top_plate_rear_link:
+                robot1/inertial_link:
                   {}
-              robot4user_rail_link:
-                {}
+                robot1/rear_bumper_link:
+                  {}
+                robot1/rear_left_wheel:
+                  {}
+                robot1/rear_right_wheel:
+                  {}
+                robot1/top_chassis_link:
+                  {}
+                robot1/top_plate_link:
+                  robot1/top_plate_front_link:
+                    {}
+                  robot1/top_plate_rear_link:
+                    {}
+                robot1/user_rail_link:
+                  {}
+          robot2/map:
+            robot2/odom:
+              robot2/base_link:
+                robot2/base_footprint:
+                  {}
+                robot2/base_lidar:
+                  {}
+                robot2/front_bumper_link:
+                  {}
+                robot2/front_left_wheel:
+                  {}
+                robot2/front_right_wheel:
+                  {}
+                robot2/gps_link:
+                  {}
+                robot2/imu_link:
+                  {}
+                robot2/inertial_link:
+                  {}
+                robot2/rear_bumper_link:
+                  {}
+                robot2/rear_left_wheel:
+                  {}
+                robot2/rear_right_wheel:
+                  {}
+                robot2/top_chassis_link:
+                  {}
+                robot2/top_plate_link:
+                  robot2/top_plate_front_link:
+                    {}
+                  robot2/top_plate_rear_link:
+                    {}
+                robot2/user_rail_link:
+                  {}
+          robot3/map:
+            robot3/odom:
+              robot3/base_link:
+                robot3/base_footprint:
+                  {}
+                robot3/base_lidar:
+                  {}
+                robot3/front_bumper_link:
+                  {}
+                robot3/front_left_wheel:
+                  {}
+                robot3/front_right_wheel:
+                  {}
+                robot3/gps_link:
+                  {}
+                robot3/imu_link:
+                  {}
+                robot3/inertial_link:
+                  {}
+                robot3/rear_bumper_link:
+                  {}
+                robot3/rear_left_wheel:
+                  {}
+                robot3/rear_right_wheel:
+                  {}
+                robot3/top_chassis_link:
+                  {}
+                robot3/top_plate_link:
+                  robot3/top_plate_front_link:
+                    {}
+                  robot3/top_plate_rear_link:
+                    {}
+                robot3/user_rail_link:
+                  {}
+          robot4/map:
+            robot4/odom:
+              robot4/base_link:
+                robot4/base_footprint:
+                  {}
+                robot4/base_lidar:
+                  {}
+                robot4/front_bumper_link:
+                  {}
+                robot4/front_left_wheel:
+                  {}
+                robot4/front_right_wheel:
+                  {}
+                robot4/gps_link:
+                  {}
+                robot4/imu_link:
+                  {}
+                robot4/inertial_link:
+                  {}
+                robot4/rear_bumper_link:
+                  {}
+                robot4/rear_left_wheel:
+                  {}
+                robot4/rear_right_wheel:
+                  {}
+                robot4/top_chassis_link:
+                  {}
+                robot4/top_plate_link:
+                  robot4/top_plate_front_link:
+                    {}
+                  robot4/top_plate_rear_link:
+                    {}
+                robot4/user_rail_link:
+                  {}
       Update Interval: 0
+      Value: true
+    - Alpha: 0.699999988079071
+      Class: rviz_default_plugins/Map
+      Color Scheme: map
+      Draw Behind: false
+      Enabled: true
+      Name: Map
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot1/global_costmap/costmap
+      Update Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot1/global_costmap/costmap_updates
+      Use Timestamp: false
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/LaserScan
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: -999999
+      Min Color: 0; 0; 0
+      Min Intensity: 999999
+      Name: LaserScan
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot1/scan
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/LaserScan
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 0
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: LaserScan
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot2/scan
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/LaserScan
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 0
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: LaserScan
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot3/scan
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/LaserScan
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 0
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: LaserScan
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot4/scan
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Alpha: 0.699999988079071
+      Class: rviz_default_plugins/Map
+      Color Scheme: costmap
+      Draw Behind: false
+      Enabled: true
+      Name: Map
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot1/local_costmap/costmap
+      Update Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot1/local_costmap/costmap_updates
+      Use Timestamp: false
+      Value: true
+    - Alpha: 0.699999988079071
+      Class: rviz_default_plugins/Map
+      Color Scheme: costmap
+      Draw Behind: false
+      Enabled: true
+      Name: Map
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot2/local_costmap/costmap
+      Update Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot2/local_costmap/costmap_updates
+      Use Timestamp: false
+      Value: true
+    - Alpha: 0.699999988079071
+      Class: rviz_default_plugins/Map
+      Color Scheme: costmap
+      Draw Behind: false
+      Enabled: true
+      Name: Map
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot3/local_costmap/costmap
+      Update Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot3/local_costmap/costmap_updates
+      Use Timestamp: false
+      Value: true
+    - Alpha: 0.699999988079071
+      Class: rviz_default_plugins/Map
+      Color Scheme: costmap
+      Draw Behind: false
+      Enabled: true
+      Name: Map
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot4/local_costmap/costmap
+      Update Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot4/local_costmap/costmap_updates
+      Use Timestamp: false
+      Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz_default_plugins/Path
+      Color: 25; 255; 0
+      Enabled: true
+      Head Diameter: 0.30000001192092896
+      Head Length: 0.20000000298023224
+      Length: 0.30000001192092896
+      Line Style: Lines
+      Line Width: 0.029999999329447746
+      Name: Path
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot1/plan
+      Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz_default_plugins/Path
+      Color: 25; 255; 0
+      Enabled: true
+      Head Diameter: 0.30000001192092896
+      Head Length: 0.20000000298023224
+      Length: 0.30000001192092896
+      Line Style: Lines
+      Line Width: 0.029999999329447746
+      Name: Path
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot2/plan
+      Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz_default_plugins/Path
+      Color: 25; 255; 0
+      Enabled: true
+      Head Diameter: 0.30000001192092896
+      Head Length: 0.20000000298023224
+      Length: 0.30000001192092896
+      Line Style: Lines
+      Line Width: 0.029999999329447746
+      Name: Path
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot3/plan
+      Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz_default_plugins/Path
+      Color: 25; 255; 0
+      Enabled: true
+      Head Diameter: 0.30000001192092896
+      Head Length: 0.20000000298023224
+      Length: 0.30000001192092896
+      Line Style: Lines
+      Line Width: 0.029999999329447746
+      Name: Path
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot4/plan
+      Value: true
+    - Alpha: 1
+      Axes Length: 1
+      Axes Radius: 0.10000000149011612
+      Class: rviz_default_plugins/Pose
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.30000001192092896
+      Head Radius: 0.10000000149011612
+      Name: Pose
+      Shaft Length: 1
+      Shaft Radius: 0.05000000074505806
+      Shape: Arrow
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot1/goal_pose
+      Value: true
+    - Alpha: 1
+      Axes Length: 1
+      Axes Radius: 0.10000000149011612
+      Class: rviz_default_plugins/Pose
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.30000001192092896
+      Head Radius: 0.10000000149011612
+      Name: Pose
+      Shaft Length: 1
+      Shaft Radius: 0.05000000074505806
+      Shape: Arrow
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot2/goal_pose
+      Value: true
+    - Alpha: 1
+      Axes Length: 1
+      Axes Radius: 0.10000000149011612
+      Class: rviz_default_plugins/Pose
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.30000001192092896
+      Head Radius: 0.10000000149011612
+      Name: Pose
+      Shaft Length: 1
+      Shaft Radius: 0.05000000074505806
+      Shape: Arrow
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot3/goal_pose
+      Value: true
+    - Alpha: 1
+      Axes Length: 1
+      Axes Radius: 0.10000000149011612
+      Class: rviz_default_plugins/Pose
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.30000001192092896
+      Head Radius: 0.10000000149011612
+      Name: Pose
+      Shaft Length: 1
+      Shaft Radius: 0.05000000074505806
+      Shape: Arrow
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot4/goal_pose
       Value: true
   Enabled: true
   Global Options:
@@ -753,7 +1231,7 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /goal_pose
+        Value: robot1/goal_pose
     - Class: rviz_default_plugins/PublishPoint
       Single click: true
       Topic:
@@ -768,26 +1246,21 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Class: rviz_default_plugins/Orbit
-      Distance: 5.277319431304932
+      Angle: -0.010000096634030342
+      Class: rviz_default_plugins/TopDownOrtho
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
-      Focal Point:
-        X: -0.13861188292503357
-        Y: -0.6532866358757019
-        Z: 0.6532319784164429
-      Focal Shape Fixed Size: true
-      Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.6903983354568481
+      Scale: 45.312339782714844
       Target Frame: <Fixed Frame>
-      Value: Orbit (rviz)
-      Yaw: 6.068568229675293
+      Value: TopDownOrtho (rviz_default_plugins)
+      X: -2.961304187774658
+      Y: 4.347621440887451
     Saved: ~
 Window Geometry:
   Displays:
@@ -795,7 +1268,7 @@ Window Geometry:
   Height: 1016
   Hide Left Dock: false
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd0000000400000000000001690000035afc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d0000035a000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f0000035afc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003d0000035a000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000073a0000003efc0100000002fb0000000800540069006d006501000000000000073a000002fb00fffffffb0000000800540069006d00650100000000000004500000000000000000000004b60000035a00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000400000000000001560000035afc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007303000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d0000035a000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f0000035afc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003d0000035a000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000073a0000003efc0100000002fb0000000800540069006d006501000000000000073a000002fb00fffffffb0000000800540069006d00650100000000000004500000000000000000000004c90000035a00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -806,4 +1279,4 @@ Window Geometry:
     collapsed: false
   Width: 1850
   X: 2630
-  Y: 27
+  Y: 547

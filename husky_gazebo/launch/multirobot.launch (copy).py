@@ -69,7 +69,7 @@ def generate_launch_description():
     gzserver = ExecuteProcess(
         cmd=['gzserver',
              '-s', 'libgazebo_ros_init.so',
-             '-u','-s', 'libgazebo_ros_factory.so',
+             '-s', 'libgazebo_ros_factory.so',
              world_path],
         output='screen',
     )
@@ -129,11 +129,9 @@ def generate_launch_description():
                 "-topic", namespace+'/robot_description',
                 '-robot_namespace', robot['name'],
                 '-entity', robot['name'],
-                '-x', str(-float(size_values[0])/2-sim_pos[0][0]+robot['x_pos']),
-                '-y', str(-float(size_values[1])/2-sim_pos[0][1]+robot['y_pos']),
-                #'-z', str(-size_values[2]/2+sim_pos[0][]+robot['z_pos']),
+                '-x', str(robot['x_pos']),
+                '-y', str(robot['y_pos']),
                 '-z', str(robot['z_pos']),
-
                 ],
             parameters=[{'use_sim_time': use_sim_time}],
             output='screen',
@@ -152,7 +150,7 @@ def generate_launch_description():
         odom_tf = Node( 
         package='tf2_ros',
         executable='static_transform_publisher',
-        arguments=[str(-robot['x_pos']+float(size_values[0])/2+sim_pos[0][0]),str(-robot['y_pos']+float(size_values[0])/2+sim_pos[0][1]), '0', '0', '0', '0', 
+        arguments=[str(-robot['x_pos']),str(-robot['y_pos']), '0', '0', '0', '0', 
             robot['name']+'/map', robot['name'] + '/odom'],    
         output='screen')
 
