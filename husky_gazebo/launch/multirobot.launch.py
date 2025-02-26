@@ -18,6 +18,7 @@ ARGUMENTS = [
 robot_names = []
 robot_positions = []
 sim_pos=[]
+map_size=[]
 
 with open(os.path.join(get_package_share_directory('husky_navigation'), 'params', 'multirobot_names.yaml'), 'r') as file:
     names = yaml.safe_load(file)
@@ -28,14 +29,12 @@ with open(os.path.join(get_package_share_directory('husky_navigation'), 'params'
 with open(os.path.join(get_package_share_directory('cv_gdal'), 'maps', 'map1.yaml'), 'r') as file:
     map_conf = yaml.safe_load(file)
     sim_pos.append(map_conf['origin'])
+    map_size.append(map_conf['map_size'])
     #sim_pos contains the position of the first robot in the map (x,y,z)
 
-with open(os.path.join(get_package_share_directory('cv_gdal'), 'worlds', 'la_cabrera_5D.world'), 'r') as file:
-    world_content = file.read()
-    start_index = world_content.find('<size>')
-    end_index = world_content.find('</size>')
-    size_values = world_content[start_index + len('<size>'):end_index].strip().split()
-    #size_values contains the size of the world (x,y,z)
+
+size_values=map_size[0]
+
 
 
 def generate_launch_description():
@@ -131,7 +130,6 @@ def generate_launch_description():
                 '-entity', robot['name'],
                 '-x', str(-float(size_values[0])/2-sim_pos[0][0]+robot['x_pos']),
                 '-y', str(-float(size_values[1])/2-sim_pos[0][1]+robot['y_pos']),
-                #'-z', str(-size_values[2]/2+sim_pos[0][]+robot['z_pos']),
                 '-z', str(robot['z_pos']),
 
                 ],
@@ -140,19 +138,22 @@ def generate_launch_description():
         )
         arrNodes.append(spawn_entity_cmd)
 
-        node_tf = Node( 
+
+
+        map_tf = Node( 
         package='tf2_ros',
         executable='static_transform_publisher',
         arguments=[str(robot['x_pos']),str(robot['y_pos']),'0', '0', '0', '0', 
             '/map', robot['name'] + '/map'],    
         output='screen')
 
-        arrNodes.append(node_tf)
+        ## UNCOMMENT FOR PLANAR NAVIGATION
+        #arrNodes.append(map_tf)
 
         odom_tf = Node( 
         package='tf2_ros',
         executable='static_transform_publisher',
-        arguments=[str(-robot['x_pos']+float(size_values[0])/2+sim_pos[0][0]),str(-robot['y_pos']+float(size_values[0])/2+sim_pos[0][1]), '0', '0', '0', '0', 
+        arguments=[str(-robot['x_pos']+float(size_values[0])/2+sim_pos[0][0]),str(-robot['y_pos']+float(size_values[1])/2+sim_pos[0][1]), '0', '0', '0', '0', 
             robot['name']+'/map', robot['name'] + '/odom'],    
         output='screen')
 
